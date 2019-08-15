@@ -102,8 +102,6 @@ How we write web services / rest api using python django rest framework
 	router = routers.DefaultRouter()
 	router.register(r'movies', views.MovieViewSet)
 
-	# Wire up our API using automatic URL routing.
-	# Additionally, we include login URLs for the browsable API.
 	urlpatterns = [
 	    path('admin/', admin.site.urls),
 	    path('', include(router.urls)),
@@ -123,13 +121,13 @@ How we write web services / rest api using python django rest framework
 
 	from .models import Movie
 
-	# Register your models here.
+	Register your models here.
 
 	sadmin.site.register(Movie)
 
-20) >python manage.py makemigrations     this will need when new migration of database
+20) python manage.py makemigrations     this will need when new migration of database
 
-21) >python manage.py migrate 1st this process after setup django api project and also use after migration
+21) python manage.py migrate 1st this process after setup django api project and also use after migration
 
 # Finally we create Movie table under this python NoSQL database we can check CRUD operations using postman or directly added in frontend framework. Here we check on postman
 
